@@ -6,7 +6,11 @@ An initial draft for some vagrant puppet provisioning boilerplate
 ###Notes:
 * The modules are segregated into two areas: 'core' & 'site'.
 * 'core' is meant for modules that won't change very much, i.e., an apache packge module.
-* 'site' is meant for modules that will change and are directly related to the site you are building, i.e., a list of python packages required by your project
+* 'site' is meant for modules that will change and are directly related to the site you are building, i.e., a list of python packages required by your project.
+* This particular set up uses the Stages feature in Puppet to ensure some things run before others
+    * see: http://docs.puppetlabs.com/guides/language_guide.html (scroll down to "Run Stages")
+* What runs in the 'first' and 'last' stages is managed by the site/manifests/init.pp
+    * Follow the code thats already there for examples. 
 * Not everything EVER is in here, but it's been compiled from a group of projects using vagrant, feel free to fork / pull reqeust if you would like to add your own modules.
 
 ###Core Modules:
