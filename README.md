@@ -7,10 +7,10 @@ An initial draft for some vagrant puppet provisioning boilerplate
 * The modules are segregated into two areas: 'core' & 'site'.
 * 'core' is meant for modules that won't change very much, i.e., an apache packge module.
 * 'site' is meant for modules that will change and are directly related to the site you are building, i.e., a list of python packages required by your project
-* Not everything is in here, but it's been compiled from a group of projects using vagrant, feel free to fork / pull reqeust if you would like to add your own modules.
+* Not everything EVER is in here, but it's been compiled from a group of projects using vagrant, feel free to fork / pull reqeust if you would like to add your own modules.
 
 ###Core Modules:
-*Packages:
+* Packages:
     * apache2
     * git
     * mysql5
