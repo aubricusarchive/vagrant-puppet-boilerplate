@@ -25,3 +25,6 @@ An initial draft for some vagrant puppet provisioning boilerplate
 
 ###Disclaimer:
 * These modules have only been tested on an Ubuntu vagrant virtual machine. As the finer details of Linux environments vary you may encounter unexpected error when using something other than Ubuntu. I intend to add more support later but this is what you get for now. Again fork / pull requset if you find time to do it yourself! Thanks!
+
+###TODO:
+1. Update README / Documentation
