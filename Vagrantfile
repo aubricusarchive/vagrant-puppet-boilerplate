@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "vagrantup_precise32"
+  config.vm.box = "precise32"
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
@@ -22,10 +22,9 @@ Vagrant::Config.run do |config|
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
-  # config.vm.share_folder "v-data", "/vagrant_data", "../data"
-  config.vm.share_folder "www", "/home/vagrant/projects/www", "www"
+  # config.vm.share_folder "www", "/home/vagrant/projects/www", "www"
 
-  #config.vm.provision :puppet, :options => "--verbose --debug" do |puppet|
+  # config.vm.provision :puppet, :options => "--verbose --debug" do |puppet|
   # there is a bug in 2.7
   # http://projects.puppetlabs.com/issues/9862
   # err: /File[/var/lib/puppet/rrd]: Could not evaluate: Could not find group puppet
