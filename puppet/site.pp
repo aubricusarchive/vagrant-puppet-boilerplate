@@ -6,17 +6,20 @@ node default {
     stage { last: require => Stage[main] }
 
     # add includes here
-    include site::init
-    include core::apache2
-    include core::git
-    include core::mysql5
-    include core::php5
-    include core::python
-    include core::ruby
-    include core::vim
-    include site::php-packages
-    include site::python-packages
-    include site::ruby-packages
-    include site::apache-vhosts
-    include site::apache-modules
+    # include site::init
+    # include core::yeoman
+    # include core::curl
+    # include core::yeoman
+    # include core::apache2
+    # include core::git
+    # include core::mysql5
+    # include core::php5
+    # include core::python
+    # include core::ruby
+    # include core::vim
+    # include site::php-packages
+    # include site::python-packages
+    # include site::ruby-packages
+    # include site::apache-vhosts
+    # include site::apache-modules
 }
