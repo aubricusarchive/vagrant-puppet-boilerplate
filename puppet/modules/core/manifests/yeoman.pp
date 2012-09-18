@@ -17,9 +17,8 @@
 # wget -N http://phantomjs.googlecode.com/files/phantomjs-1.6.1-linux-i686-dynamic.tar.bz2
 # bunzip2 phantomjs-1.6.1-linux-i686-dynamic.tar.bz2
 # tar -xvf phantomjs-1.6.1-linux-i686-dynamic.tar
-# cd ~/ && mkdir .phantomjs && cp -R ./phantomjs-1.6.1-linux-i686-dynamic ./phantomjs
-# ln -s ./phantomjs/bin/phantomjs /usr/local/bin/phantomjs
-# rm -rf phantomjs-1.6.1-linux-i686-dynamic phantomjs-1.6.1-linux-i686-dynamic.tar
+# mv ./phantomjs-1.6.1-linux-i686-dynamic ./.phantomjs
+# sudo ln -s ./.phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 
 # curl
 # sudo apt-get install curl
