@@ -34,3 +34,4 @@ An initial draft for some vagrant puppet provisioning boilerplate
 
 ###TODO:
 1. Update README / Documentation
+2. Yeoman.io + PhantomJS provisioning successfully installs PhantomJS, however running PhantomJS still has an issue with a shared lib. Docs reccommend building it from source, I need to try this to see if it fixes my issue.
