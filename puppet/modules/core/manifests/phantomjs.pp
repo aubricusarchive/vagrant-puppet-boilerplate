@@ -1,14 +1,22 @@
-# todo:
-	# phantomjs install is less than elegant, for now we only
-	# copy this shell script over to automate the download and unzip
-	# of the phantomjs binary into /home/vagrant
 class core::phantomjs{
-	file{'install-phantomjs.sh':
-        path => '/home/vagrant/install-phantomjs.sh',
-        ensure => present,
-        source => "puppet:///modules/core/phantomjs/install-phantomjs.sh",
+	$packages = [
+        'fontconfig',
+        'libfreetype6'
+    ]
+
+    package { $packages: }
+
+    exec { "get_phantomjs_source":
+        command => ["wget -N http://phantomjs.googlecode.com/files/phantomjs-1.6.1-linux-i686-dynamic.tar.bz2 && tar xvfj phantomjs-1.6.1-linux-i686-dynamic.tar.bz2"],
+        cwd => "/home/vagrant/",
+        path => ["/usr/bin/", "/bin/"],
+        creates => "/home/vagrant/phantomjs-1.6.1-linux-i686-dynamic",
+    }
+    file { "/usr/local/bin/phantomjs":
+        ensure => link,
+        target => '/home/vagrant/phantomjs-1.6.1-linux-i686-dynamic/bin/phantomjs',
         owner => root,
         group => root,
-        mode => 0777;
+        require => Exec["get_phantomjs_source"],
     }
 }
